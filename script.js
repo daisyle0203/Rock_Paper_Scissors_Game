@@ -7,6 +7,7 @@ let result_p = document.querySelector(".result>p");
 let rock_div = document.getElementById("r");
 let paper_div = document.getElementById("p");
 let scissors_div = document.getElementById("s");
+let button_div = document.getElementById("button")
 
 function getComputerChoice() {
     let choices = ['r', 'p', 's'];
@@ -23,7 +24,7 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + " .You win!"
+    result_p.innerHTML = "Computer picks " + convertToWord(computerChoice) + "." + " You win!"
 
 }
 
@@ -31,11 +32,11 @@ function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_pinnerHTML = convertToWord(userChoice) + " loses " + convertToWord(computerChoice) + " .You lost :("
+    result_pinnerHTML = "Computer picks " + convertToWord(computerChoice) + "." + " You lost :("
 }
 
 function draw(userChoice, computerChoice) {
-    result_p.innerHTML = convertToWord(userChoice) + " equals " + convertToWord(computerChoice) + " .It's a drawn :)"
+    result_p.innerHTML = "Computer also picks " + convertToWord(computerChoice) + "." + " It's a drawn :)"
 }
 
 function game(userChoice) {
@@ -59,6 +60,14 @@ function game(userChoice) {
     } 
 }
 
+function restart() {
+    userScore = 0;
+    computerScore = 0;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_p.innerHTML = "";
+}
+
 function main() {
     rock_div.addEventListener('click', function() {
         game("r");
@@ -68,6 +77,9 @@ function main() {
     })
     scissors_div.addEventListener('click', function() {
         game("s");
+    })
+    button_div.addEventListener('click', function() {
+        restart("button");
     })
 }
 main();
