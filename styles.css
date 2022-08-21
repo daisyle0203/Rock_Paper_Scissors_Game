@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Set body background color */
 body {
     background-color:white;
 }
 
+/* Set header style */
 header {
     background-color: rgb(96,17,85);
     padding: 1.25em;
@@ -21,8 +24,9 @@ header h1 {
    font-family: 'Open Sans', sans-serif;
 }
 
+/* Style score board */
 .score-board {
-    margin: 1.25em auto;
+    margin: 1em auto;
     border:  0.1875em solid rgb(96,17,85);
     border-radius: 0.25em;
     text-align: center;
@@ -41,6 +45,7 @@ header h1 {
 #computer-score {
     font-size: 2em;
 }
+
 .badge {
     color: white;
     font-size: 1em;
@@ -72,7 +77,7 @@ header h1 {
 .result {
     font-size: 1em;
     font-family:'Open Sans', sans-serif;
-    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 
  .result p {
@@ -88,10 +93,11 @@ header h1 {
     text-align: center;
  }
 
+ /* Set choice styles */
  .choice {
    display: flex; 
    display: inline-flex;
-   margin: 0 1em;
+   margin: 1em 1em;
    transition: 0.5s ease;
  }
 
@@ -103,36 +109,73 @@ header h1 {
     transition: 0.5s ease;
 }
 
+/* Style action message */
 #action-message {
     text-align: center;
     color: rgb(96,17,85);
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: 3em;
-    padding-top: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
+.text-center {
+    text-align: center;
+}
+
+/* Style button */
+.button {
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%,  rgb(160, 80, 149) 0%,  rgb(118, 27, 106)100% );
+    box-shadow: 0px 2px 4px rgb(154, 52, 140), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(96,17,85);
+    padding: 0 25px;
+    border-radius: 6px;
+    color: #fff;
+    height: 48px;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+}
+.button:hover {
+    box-shadow: 0px 4px 8px  rgb(129, 48, 118), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px  rgb(145, 78, 136);
+    transform: translateY(-2px);
+    }
+.button:active {
+    box-shadow: inset 0px 3px 7px rgb(153, 55, 140);
+    transform: translateY(2px);
+    } 
+
+/* Set media query for smaller screen */
 @media (max-width: 500px) {
     .choice {
         flex-direction: column;
-        margin: 0.5em;
-        }
+    }
+
     .score-board {
         width: 7em;
     }
     
     #user-score {
-        font-size: 1.25em;
+        font-size: 1em;
     }
     
     #computer-score {
-        font-size: 1.25em;
+        font-size: 1em;
     }
     
     #user-label {
         position: absolute;
         top: 1em;
-        left: -1.8em;
+        left: -2.1em;
+        padding-right: 0.9em;
+        padding-left: 0.9em;
         color: white;
         background-color:rgb(96,17,85) ;
     }
@@ -140,7 +183,7 @@ header h1 {
     #computer-label {
         position: absolute;
         top: 1em;
-        right: -2em; 
+        right: -2.1em; 
         color: white;
         background-color:rgb(96,17,85) ;
     }
@@ -156,7 +199,12 @@ header h1 {
 
     #action-message {
         font-size: 2em;
-        padding-bottom: 0.25em;
+        margin-top: 0;
+        margin-bottom: 0.5em;
     
+    }
+
+    .button {
+        margin: 0 0.8em;
     }
 }
