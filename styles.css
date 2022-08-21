@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:white;
+}
+
+header {
+    background-color: rgb(96,17,85);
+    padding: 1.25em;
+}
+
+header h1 {
+   color: white;
+   text-align: center;
+   font-family: 'Open Sans', sans-serif;
+}
+
+.score-board {
+    margin: 1.25em auto;
+    border:  0.1875em solid rgb(96,17,85);
+    border-radius: 0.25em;
+    text-align: center;
+    width: 12.5em;
+    color:rgb(96,17,85);
+    font-size: 2em;
+    padding: 1em 1.25em;
+    font-family:'Open Sans', sans-serif;
+    position: relative;
+}
+
+#user-score {
+    font-size: 2em;
+}
+
+#computer-score {
+    font-size: 2em;
+}
+.badge {
+    color: white;
+    font-size: 1em;
+    padding: 0.125em 0.625em;
+    font-family:'Open Sans', sans-serif ;
+}
+
+#user-label {
+    position: absolute;
+    top: 1.56em;
+    left: -1.8em;
+    color: white;
+    background-color:rgb(96,17,85) ;
+}
+
+#computer-label {
+    position: absolute;
+    top: 1.56em;
+    right: -1.8em; 
+    color: white;
+    background-color:rgb(96,17,85) ;
+}
+
+.resize {
+    width: 10em;
+    height: 10em;
+}
+
+.result {
+    font-size: 1em;
+    font-family:'Open Sans', sans-serif;
+    padding-bottom: 2em;
+}
+
+ .result p {
+    text-align: center;
+    color: rgb(96,17,85);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 3em;
+ }
+
+ .choices {
+    margin-top: 3em 0;
+    text-align: center;
+ }
+
+ .choice {
+   display: flex; 
+   display: inline-flex;
+   margin: 0 1em;
+   transition: 0.5s ease;
+ }
+
+.choice:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}
+
+#action-message {
+    text-align: center;
+    color: rgb(96,17,85);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 3em;
+    padding-top: 1em;
+}
+
+@media (max-width: 500px) {
+    .choice {
+        flex-direction: column;
+        margin: 0.5em;
+        }
+    .score-board {
+        width: 7em;
+    }
+    
+    #user-score {
+        font-size: 1.25em;
+    }
+    
+    #computer-score {
+        font-size: 1.25em;
+    }
+    
+    #user-label {
+        position: absolute;
+        top: 1em;
+        left: -1.8em;
+        color: white;
+        background-color:rgb(96,17,85) ;
+    }
+    
+    #computer-label {
+        position: absolute;
+        top: 1em;
+        right: -2em; 
+        color: white;
+        background-color:rgb(96,17,85) ;
+    }
+    
+    .result p {
+        font-size: 2em;
+    }
+
+    .resize {
+        width: 8em;
+        height: 8em;
+    }
+
+    #action-message {
+        font-size: 2em;
+        padding-bottom: 0.25em;
+    
+    }
+}
