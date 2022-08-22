@@ -6,6 +6,7 @@
 * Allows users to pick their choices by clicking on rock, paper, scissors images.
 * Tracks scores and display them on the score board.
 * Has a animated button that allows users to restart the game and set the scores back to zero.
+* Fully responsive on any device.
 * Built with HTML, CSS and JS.
 ---
 ## Screenshot of the game application
