@@ -10,7 +10,7 @@
 * Built with HTML, CSS and JS.
 ---
 ## Screenshot of the game application
-![Game Screenshot](/images/Rock-Paper-Scissors.png)
+![Game Screenshot](https://media.giphy.com/media/4TWRu6Emha3f35wDJw/giphy.gif)
 ---
 ## Link to play the game
-[https://daisyle0203.github.io/rock_paper_scissors/](https://daisyle0203.github.io/rock_paper_scissors/)
+[Play game here!](https://daisyle0203.github.io/rock_paper_scissors/)
