@@ -13,4 +13,4 @@
 ![Game Screenshot](https://media.giphy.com/media/4TWRu6Emha3f35wDJw/giphy.gif)
 ---
 ## Link to play the game
-[Play game here!](https://daisyle0203.github.io/rock_paper_scissors/)
+[Play game here!](https://daisyle0203.github.io/Rock_Paper_Scissors_Game/)
